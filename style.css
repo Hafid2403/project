@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: "poppins" sans-serif;
+}
+
+body {
+    height: 1080px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(photo1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.div1 {
+  position: relative;
+    width: 100%;
+    max-width: 400px;
+    height:500px;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+     border-radius: 20px;
+    border: 3px solid rgba(257,257,257,0.9);
+    overflow: hidden;
+    backdrop-filter:blur(2px);
+    
+}
+
+.box1 {
+    padding: 50px;
+    width:100%;
+}
+
+.box1 h1 {
+    font-size: 50px;
+    font-size: 50px;
+    text-align: center;
+    color: #ffff;
+    text-shadow: 
+    0 0 7px #0fa,
+    0 0 10px yellow,
+    0 0 21px red,
+    0 0 42px rgb(14, 181, 125),
+    0 0 82px rgb(15, 206, 142),
+    0 0 140px rgb(6, 215, 146),
+    0 0 201px rgb(24, 253, 112)
+    ;
+}
+
+.input-box {
+    position: relative;
+    height: 70PX;
+    width: 100%;
+    border-bottom:3px solid #ffff;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #3bdbc6;
+    font-weight: 500;
+    font-size:17px;
+    transition: ease 0.5s;
+}
+
+.input-box input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffff;
+    padding: 0 30px 0 6px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ffff;
+    padding-bottom: 300px;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -3px;
+}
+
+.check {
+    padding-top: 48px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: -10px 0 15px ;
+    display: flex;
+    justify-content: space-around;
+}
+
+.check label  {
+    margin-right: 6px;
+    accent-color: #ffff;
+    margin-top: 45px;
+}
+
