@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <link href="contact.css"
+    rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("form").on("submit", function(e) {
+            
+                if (!$('#fname').val() || !$('#lname').val() || !$('#eaddress').val() || !$('#subject').val()) {
+                    e.preventDefault(); 
+                    alert('Please fill in all required fields.');
+                }
+            });
+
+           
+            $('#eaddress').on('focus', function() {
+                console.log('Email Address field is focused.');
+            });
+        });
+    </script>
+<body>    
+    <div class="container">
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>Any question or remarks? Just write us a message!</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8556157954386!2d107.16823517366002!3d-6.282703861494874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6985646ea5a3bf%3A0x4c351314eea2ea98!2sPresident%20University%20Student%20Housing!5e0!3m2!1sen!2sid!4v1697701278690!5m2!1sen!2sid" width="580" height="525" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <map name="workmap"></map>
+          </div>
+          <div class="column">
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name">
+              <label for="eaddress">Email Address</label> 
+              <input type="text" id="eaddress" placeholder="Your email">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="indonesia">Indonesia</option>
+                <option value="malaysia">Malaysia</option>
+                <option value="australia">Australia</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something" style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+</head>
+</html>
